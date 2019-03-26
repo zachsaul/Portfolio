@@ -1,0 +1,29 @@
+#gear, #pyramid, #eye {height: 200px; padding: 30px;}
+@keyframes rotate-forward {
+  100% {transform: rotate(360deg);}
+}
+@keyframes pyramid-flip {
+  40% {transform: rotate(0deg);}
+  43.5% {transform: rotate(180deg);}
+  96.5% {transform: rotate(180deg);}
+  100% {transform: rotate(0deg);}
+
+}
+#Gear_1_ {transform-origin: 50% 50%; transform-box: fill-box;}
+#Gear_1_ {animation: rotate-forward 12s linear infinite;}
+
+#pyramid {animation: pyramid-flip 10s linear infinite;}
+
+@keyframes eyeball-move {
+  12% {transform: translateX(0);}
+  17% {transform: translateX(9px);}
+  32% {transform: translateX(9px);}
+  37% {transform: translateX(-9px);}
+  49% {transform: translateX(-9px);}
+  55% {transform: translateX(0);}
+}
+#eyeball {animation: eyeball-move 5s linear infinite;}
+
+#wireframe_1 {-webkit-box-shadow: -4px 3px 41px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -4px 3px 41px 0px rgba(0,0,0,0.75);
+box-shadow: -4px 3px 41px 0px rgba(0,0,0,0.75);}
