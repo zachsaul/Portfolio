@@ -27,3 +27,133 @@
 #wireframe_1 {-webkit-box-shadow: -4px 3px 41px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: -4px 3px 41px 0px rgba(0,0,0,0.75);
 box-shadow: -4px 3px 41px 0px rgba(0,0,0,0.75);}
+
+
+
+
+html {background-color: #eee;}
+svg {height:400px; z-index: 1000;}
+
+.head, .bangs, .eye, .side-hair, #eyeglasses, .left-brow, .right-brow, .string-hair-1, .string-hair-2, .mouth, .nose, .chin {transform-origin: 50% 50%; transform-box: fill-box;}
+
+/**/
+@keyframes brow-raise {
+  20% {transform: translateY(0);}
+  21% {transform: translateY(-15px);}
+  65% {transform: translateY(-15px);}
+  66% {transform: translateY(0);}
+}
+@keyframes nose-twitch {
+  23% {transform: scaleY(1);}
+  24.5% {transform: scaleY(0.5);}
+  26% {transform: scaleY(1);}
+}
+@keyframes nose-twitch-2 {
+  23% {transform: scaleX(1);}
+  25% {transform: scaleX(0.5);}
+  27% {transform: scaleX(1);}
+}
+@keyframes glasses-shift {
+  23% {transform: translateY(0);}
+  24.5% {transform: translateY(-10px);}
+  26% {transform: translateY(0);}
+}
+@keyframes mouth-change {
+  20% {transform: scaleX(1);}
+  21% {transform: scaleX(0.5);}
+  40% {transform: scaleX(0.5);}
+  41% {transform: scaleX(1) scaleY(3);}
+}
+
+@keyframes mouth-change-2 {
+  20% {transform: scaleX(1);}
+  21% {transform: scaleX(0.8);}
+  40% {transform: scaleX(0.8);}
+  41% {transform: scaleX(1);}
+  60% {transform: scaleY(1);}
+  61% {transform: scaleY(0.3) rotate(25deg);}
+  80% {transform: scaleY(0.3) rotate(0deg);}
+  81% {transform: scaleY(1);}
+}
+
+@keyframes chin-shift {
+  20% {transform: translateY(0);}
+  21% {transform: scaleX(0.85);}
+  23% {transform: translateY(5px);}
+  30% {transform: translateY(0);}
+  33% {transform: scaleX(1);}
+}
+
+@keyframes hair-wave {
+  20% {transform: scaleX(.7);}
+  40% {transform: scaleX(.1.1);}
+}
+
+@keyframes blink {
+  25% {transform: scaleY(1);}
+  26% {transform: scaleY(.1);}
+  27% {transform: scaleY(1);}
+  70% {transform: scaleY(1);}
+  71% {transform: scaleY(.1);}
+  72% {transform: scaleY(1);}
+  74% {transform: scaleY(1);}
+  75% {transform: scaleY(.1);}
+  76% {transform: scaleY(1);}
+}
+
+@keyframes eye-move {
+  33% {transform: translateX(0);}
+  36% {transform: translateX(15px);}
+  66% {transform: translateX(17px);}
+  69% {transform: translateX(0);}
+}
+
+@keyframes nose-move {
+  60% {transform: translateX(0) rotate(0deg);}
+  66% {transform: translateX(-15px) rotate(10deg);}
+  90% {transform: translateX(-15px) rotate(10deg);}
+  96% {transform: translateX(0) rotate(0deg);}
+}
+@keyframes head-turn {
+  60% {transform: scaleX(1);}
+  66% {transform: scaleX(0.95);}
+  90% {transform: scaleX(0.95);}
+  96% {transform: scaleX(1);}
+}
+
+/*nose and glasses shift on same time loop*/
+
+#purple_person .mouth {animation: mouth-change 8s linear infinite;}
+#purple_person .eyeglasses {animation: glasses-shift 10s linear infinite;}
+#purple_person .nose {animation: nose-twitch 10s linear infinite;}
+#purple_person .right-brow {animation: brow-raise 10s ease-in-out 2.5s infinite;}
+#purple_person .chin {animation: chin-shift 6.5s linear infinite;}
+
+#blue-person .eye {animation: blink 6s linear infinite;}
+#blue-person .mouth {animation: mouth-change-2 10s linear infinite;}
+#blue-person .nose {animation: nose-twitch-2 6s linear 2s infinite;}
+
+#green-person .eye {animation: eye-move 6s linear infinite;}
+#green-person .mouth {animation: mouth-change 7s linear 1.5s infinite;}
+
+#yellow-person .nose {animation: nose-move 4.5s linear infinite;}
+#yellow-person .head {transform-origin: 50% 0; animation: head-turn 4.5s linear infinite;}
+#yellow-person .eye {animation: blink 6s linear 1.5s infinite;}
+#yellow-person .mouth {animation: mouth-change-2 6s linear 1.5s infinite;}
+
+
+@keyframes mouth-change-3 {
+  20% {transform: scaleY(1);}
+  21% {transform: scaleY(0.5);}
+  40% {transform: scaleY(0.5);}
+  41% {transform: scaleY(1);}
+  60% {transform: scaleY(1) scaleX(1);}
+  61% {transform: scaleY(1.5) scaleX(1.25);}
+  80% {transform: scaleY(1.5) scaleX(1.25);}
+  81% {transform: scaleY(1);}
+}
+
+
+
+#red-person .mouth {animation: mouth-change-3 6s linear 2.78s infinite;}
+#red-person .eye {animation: blink 6s linear 2s infinite;}
