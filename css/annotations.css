@@ -2,4 +2,4 @@
 #neo-head::after {content: "Neopenda"; position: absolute; top: 8vh; left: 2vw; font-weight: lighter; font-size: 7em; color: rbga(256, 256, 256, 1);}
 .slider-long-arrow-white {background-color: #eee; padding: 40px; border-radius: 50%;}
 
-#homelink {background-image: url(images/underline.png); background-position: 50% 70%; background-repeat: no-repeat; background-size: contain;}
+.active {background-image: url(images/underline.png)!important; background-position: 50% 70%!important; background-repeat: no-repeat!important; background-size: contain!important;}
