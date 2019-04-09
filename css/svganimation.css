@@ -157,3 +157,40 @@ svg {height:400px; z-index: 1000;}
 
 #red-person .mouth {animation: mouth-change-3 6s linear 2.78s infinite;}
 #red-person .eye {animation: blink 6s linear 2s infinite;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes rotate {
+  100% {transform: rotate(-360deg);}
+}
+@keyframes movecar {
+  0% {transform: translateX(300px);}
+  100% {transform: translateX(-1600px);}
+}
+@keyframes carjitter {
+  33% {transform: rotate(1deg);}
+  66% {transform: rotate(1deg);}
+}
+.wheel, #Car, #carbody {
+  transform-origin: 50% 50%; transform-box: fill-box;
+}
+.wheel {
+  animation: rotate 2s linear infinite;
+}
+#Car {
+  animation: movecar 10s linear infinite;
+}
+#carbody {
+  animation: carjitter .25s linear infinite;
+}
