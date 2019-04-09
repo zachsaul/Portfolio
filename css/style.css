@@ -3768,7 +3768,8 @@ aside .latest-post li figure {width: 75px;}
 .rev-slider .tp-bullet.selected, .tp-bullet:hover { opacity: 1;}
 
 /* home - portfolio metro */
-.text-bold-underline:before {background-color: #ff214f; height: 3px; width: 100%; position: absolute; right: 0; bottom:5px; content: "";}
+.text-bold-underline {z-index: 100;}
+.text-bold-underline:after {background-color: rgba(256, 256, 256, 0.35); z-index: -1; height: .3em; width: 100%; position: absolute; right: 0; bottom:5px; content: "";}
 
 /* home - portfolio  parallax */
 .parallax-title {padding: 16px 35px; display: inline-block}

@@ -1,3 +1,5 @@
 .annotation p {padding: 25px; color: #fff; background-color: #358099; border-radius: 25px 0 25px 25px;}
-#neo-head::after {content: "Neopenda"; position: absolute; top: 8vh; left: 2vw; font-weight: lighter; font-size: 8em; color: rbga(256, 256, 256, 1);}
+#neo-head::after {content: "Neopenda"; position: absolute; top: 8vh; left: 2vw; font-weight: lighter; font-size: 7em; color: rbga(256, 256, 256, 1);}
 .slider-long-arrow-white {background-color: #eee; padding: 40px; border-radius: 50%;}
+
+#homelink {background-image: url(images/underline.png); background-position: 50% 70%; background-repeat: no-repeat; background-size: contain;}
