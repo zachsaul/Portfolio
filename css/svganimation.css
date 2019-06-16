@@ -194,3 +194,36 @@ svg {height:400px; z-index: 1000;}
 #carbody {
   animation: carjitter .25s linear infinite;
 }
+
+@keyframes bar-wiggle {
+  0% {transform: scaleY(1);}
+  20% {transform: scaleY(.7);}
+  40% {transform: scaleY(.85);}
+  60% {transform: scaleY(..95);}
+  80% {transform: scaleY(.8);}
+  100% {transform: scaleY(1);}
+}
+
+@keyframes color-rotate {
+  25% {fill: #453F99;} /*red to dark lilac*/
+  50% {fill: #9B68E2;} /*red to dark lilac to light lilac*/
+  75% {fill: #E2A759;} /*light lilac to yellow*/
+  100% {fill: #453F99;} /*yellow to red*/
+}
+
+@keyframes circle-shrink {
+  30% {stroke-width: 100px;}
+  80% {stroke-width: 100px;}
+  100% {stroke-width: 0px;}
+}
+
+.bar {transform-origin: center bottom;}
+rect.bar {animation: bar-wiggle 4s ease-in-out infinite;}
+rect.bar2 {animation-delay: .5s;}
+rect.bar3 {animation-delay: 1s;}
+rect.bar4 {animation-delay: 1.5s;}
+
+.shoe-shape {transform: translateY(20px); animation: color-rotate 9s linear infinite;}
+
+#target circle {stroke: solid 2px #fff; animation: circle-shrink 5s infinite;}
+.se-cir {animation-delay: .5s;} .nw-cir {animation-delay: 1s;} .ne-cir {animation-delay: 1.5s;}
