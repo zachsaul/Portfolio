@@ -100,6 +100,7 @@ h6 {font-size:25px; line-height:30px}
 
 /* text color */
 .text-white {color:#FFF}
+.text-trans {color:transparent;}
 .text-black {color:#000}
 .text-extra-dark-gray {color:#232323}
 .text-dark-gray {color:#626262}
@@ -258,6 +259,13 @@ a.text-very-light-gray-hover:hover {color:#ededed !important;}
 .bg-very-light-gray {background-color:#fafafa}
 .bg-deep-pink {background-color:#ff214f;}
 .bg-red {background-color: #e03426;}
+.bg-rose {background-color: #E33F73;}
+.bg-rose-66 {background-color: rgba(221, 63, 115, 0.66);}
+.bg-rose-20 {background-color: rgba(221, 63, 115, 0.2);}
+.bg-lilac-66 {background-color: rgba(81, 70, 182, 0.66);}
+.bg-lilac {background-color: rgba(81, 70, 182, 1);}
+.bg-lilac-alt {background-color: rgba(74, 71, 157, 1);}
+
 .bg-teal {background-color:#7acbbb;}
 .bg-dark-teal {background-color:#358099;}
 
@@ -422,8 +430,8 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 .btn i {margin-left: 6px; vertical-align: middle; position: relative; top:-1px}
 
 /* button background */
-.btn.btn-white {background:#ffffff; border-color: #ffffff; color: #232323}
-.btn.btn-white:hover, .btn.btn-white:focus {background: transparent; color: #fff}
+.btn.btn-white {background:transparent; border-color: #ffffff; color: #fff;}
+.btn.btn-white:hover, .btn.btn-white:focus {background: #fff; color: #232323}
 .btn.btn-black {background:#000000; border-color: #000000; color: #fff}
 .btn.btn-black:hover, .btn.btn-black:focus {background: transparent; color: #000}
 .btn.btn-dark-gray {background: #232323; border-color: #232323; color: #fff}
