@@ -265,6 +265,13 @@ a.text-very-light-gray-hover:hover {color:#ededed !important;}
 .bg-lilac-66 {background-color: rgba(81, 70, 182, 0.66);}
 .bg-lilac {background-color: rgba(81, 70, 182, 1);}
 .bg-lilac-alt {background-color: rgba(74, 71, 157, 1);}
+.bg-lime {background-color: rgba(193, 221, 29, 1);}
+.bg-light-ocean {background-color: #54A4DB;}
+.bg-dark-ocean {background-color: #3D80C2;}
+.bg-light-forest {background-color: #92BC3E;}
+.bg-dark-forest {background-color: #7F9E3D;}
+.bg-light-pumpkin {background-color: #F79226;}
+.bg-dark-pumpkin {background-color: #EF6B29;}
 
 .bg-teal {background-color:#7acbbb;}
 .bg-dark-teal {background-color:#358099;}
