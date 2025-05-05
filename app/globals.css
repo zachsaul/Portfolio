@@ -1,0 +1,450 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 196 80% 30%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+  --radius: 0.5rem;
+  --steelblue: 207 44% 49%;
+  --aquamarine: 160 100% 75%;
+  --imo-blue: 62 68 174;
+  --imo-dark-grey: 21 21 21;
+  --imo-baby-blue: 227 246 255;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+}
+
+@media (max-width: 640px) {
+  .tabs-container {
+    flex-direction: column;
+  }
+}
+
+body {
+  font-family: var(--font-montserrat), sans-serif;
+  padding-top: 3.5rem; /* Reduced padding to account for fixed navigation */
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 3rem;
+  }
+}
+
+h1 {
+  font-weight: 900;
+  line-height: 1.1em !important;
+}
+
+h2 {
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  line-height: 3.5rem !important; /* Added !important to ensure this takes precedence */
+  margin-bottom: 1.5rem;
+  color: black; /* Default color to black, overridden when needed */
+}
+
+/* For specific colored headings (like in the case study page) */
+h2.text-steelblue {
+  color: hsl(var(--steelblue));
+}
+
+h3 {
+  font-weight: 400;
+}
+
+.pullquote {
+  font-family: var(--font-baskerville), serif;
+  font-size: clamp(20px, 5vw, 32px);
+  line-height: 1.4;
+  text-align: left;
+}
+
+.list {
+  font-size: clamp(16px, 4vw, 20px);
+  font-weight: 700;
+  color: white;
+  line-height: 1.3rem;
+}
+
+.gradient-bg {
+  background: linear-gradient(30deg, hsl(var(--steelblue)) 0%, hsl(var(--aquamarine)) 100%);
+  border-radius: 7px;
+}
+
+/* Animation keyframes - adjusted by 1.25x */
+@keyframes quoteAnimation {
+  0%,
+  24% {
+    opacity: 0;
+  }
+  25%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes highlightIcon {
+  0%,
+  24% {
+    outline: none;
+  }
+  25%,
+  49% {
+    outline: 2px solid hsl(var(--steelblue));
+  }
+  50%,
+  100% {
+    outline: none;
+  }
+}
+
+.quote-bubble {
+  opacity: 0;
+}
+
+.quote-bubble.static {
+  opacity: 1;
+}
+
+.quote-bubble.animate-1 {
+  animation: quoteAnimation 15s infinite;
+  animation-delay: 0s;
+}
+
+.quote-bubble.animate-2 {
+  animation: quoteAnimation 15s infinite;
+  animation-delay: 3.75s;
+}
+
+.quote-bubble.animate-3 {
+  animation: quoteAnimation 15s infinite;
+  animation-delay: 7.5s;
+}
+
+.quote-bubble.animate-4 {
+  animation: quoteAnimation 15s infinite;
+  animation-delay: 11.25s;
+}
+
+.icon-highlight-1 {
+  animation: highlightIcon 15s infinite;
+  animation-delay: 0s;
+}
+
+.icon-highlight-2 {
+  animation: highlightIcon 15s infinite;
+  animation-delay: 3.75s;
+}
+
+.icon-highlight-3 {
+  animation: highlightIcon 15s infinite;
+  animation-delay: 7.5s;
+}
+
+.icon-highlight-4 {
+  animation: highlightIcon 15s infinite;
+  animation-delay: 11.25s;
+}
+
+.flow-step {
+  position: relative;
+}
+
+.flow-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  width: 20px;
+  height: 1px;
+  background-color: hsl(var(--muted-foreground));
+  transform: translateY(-50%);
+}
+
+.flow-step:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid hsl(var(--muted-foreground));
+  transform: translateY(-50%);
+}
+
+/* Add these new styles after the existing styles */
+
+.bg-pattern {
+  background-image: url("/images/subtle-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.tabs-container-solid {
+  background-color: #3e48ae;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.tabs-list-solid {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tab-trigger-solid {
+  color: white;
+}
+
+.tab-trigger-solid[data-state="active"] {
+  background-color: white;
+  color: #3e48ae;
+}
+
+.bg-hero {
+  background-image: url("/images/hero-bg.png");
+  background-size: contain;
+  background-position: top left;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.section-padding {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.bg-organic-gray {
+  background-image: url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Thin-Gray-Organic-Zl0fbxwJOiaP3sPGd2Zrc3d23kBI2m.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+/* Animation for rating bars */
+@keyframes scaleXIn {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.animate-in-view {
+  animation: scaleXIn 1s ease-out forwards;
+  transform-origin: left;
+}
+
+/* Intersection Observer JavaScript will add this class */
+.is-visible {
+  animation: scaleXIn 1s ease-out forwards;
+}
+
+/* Circle Animation Keyframes */
+@keyframes moveLeftToRight {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(120%);
+  }
+}
+
+@keyframes moveRightToLeft {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-120%);
+  }
+}
+
+.circles-animation-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add animation for project cards */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-spin-slow {
+  animation: spin 12s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add this to your existing CSS for the pulsing circle animation */
+@keyframes pulseCircle {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-circle {
+  animation: pulseCircle 1.5s ease-in-out infinite;
+}
+
+/* Add this to the end of your globals.css file */
+
+/* Simple pulse animation for the black circle */
+@keyframes simplePulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+}
+
+.animate-simple-pulse {
+  animation: simplePulse 1.5s ease-in-out infinite;
+}
+
+/* Updated duration classes for our slower animations */
+.duration-450 {
+  transition-duration: 450ms;
+}
+
+.duration-600 {
+  transition-duration: 600ms;
+}
+
+.duration-750 {
+  transition-duration: 750ms;
+}
+
+/* Add this to ensure smooth transitions */
+
+/* Update the duration-800 class for our slower animation */
+.duration-800 {
+  transition-duration: 800ms;
+}
+
+/* Add these styles for the page transition */
+.transition-transform {
+  transition-property: transform;
+}
+
+/* Ensure the ease-in-out timing function is properly defined */
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Add this to your CSS for the case study card hover effect */
+.case-study-card {
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.case-study-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Add text shadow for better readability on the card titles */
+.case-study-card h3 {
+  /* Remove this line: text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); */
+}
+
+/* Add this to your CSS file to ensure the Open Sans font is available */
+.font-open-sans {
+  font-family: var(--font-open-sans), sans-serif;
+}
