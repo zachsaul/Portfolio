@@ -25,7 +25,7 @@ const nextConfig = {
     minimumCacheTTL: 60,
   },
   // Vercel-specific optimizations
-  swcMinify: true,
+  // Removed swcMinify as it's no longer supported in Next.js 15
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
