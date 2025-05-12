@@ -171,7 +171,8 @@ export const CirclesAnimation = () => {
             alt="Person illustration"
             width={300}
             height={300}
-            className="h-auto max-h-[300px] w-auto"
+            className="h-auto w-auto max-h-[300px] md:max-h-[320px] lg:max-h-[340px] xl:max-h-[360px]"
+            style={{ height: "66%", maxHeight: "75%" }}
           />
         </div>
 

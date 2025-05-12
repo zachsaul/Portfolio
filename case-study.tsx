@@ -66,13 +66,13 @@ export default function CaseStudy() {
       <section className="relative" style={{ marginTop: "-300px" }}>
         {/* Marker div at the beginning of intro section */}
         <div
-          className="h-[75px] w-[100vw] mt-2 mb-[-1px]"
+          className="h-[90px] w-[100vw] mt-2 mb-[-2px]"
           style={{
             backgroundImage:
               "url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pink-top-g0tDXnKTmwRHo1bR5dJfg0U4Uo9B3Y.png)",
             backgroundSize: "cover",
             backgroundPosition: "center",
-            height: "75px",
+            height: "90px",
             width: "100vw",
           }}
         ></div>
@@ -87,8 +87,8 @@ export default function CaseStudy() {
             backgroundPosition: "center",
           }}
         >
-          <div className="w-full flex flex-col md:flex-row">
-            <div className="w-full md:w-[74%] px-4 md:px-8">
+          <div className="max-w-4xl mx-auto w-full flex flex-col md:flex-row px-4">
+            <div className="w-full md:w-[74%]">
               <div className="space-y-2 mb-6 flex flex-col">
                 <div
                   className="px-[0.7rem] py-[0.2rem] rounded-full bg-[#FF9085] text-white font-bold w-fit"
@@ -153,13 +153,13 @@ export default function CaseStudy() {
         {/* Marker div at the end of pink section */}
 
         <div
-          className="h-[75px] w-[100vw]"
+          className="h-[90px] w-[100vw]"
           style={{
             backgroundImage:
               "url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pink-bottom-Rt3tDsSS7avDEWTYlKO3629OCJzEe3.png)",
             backgroundSize: "cover",
             backgroundPosition: "center",
-            height: "75px",
+            height: "90px",
             width: "100vw",
           }}
         ></div>
@@ -506,8 +506,9 @@ export default function CaseStudy() {
           <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] mb-16">
             {/* Desktop version - only show on md screens and up */}
             <div className="hidden md:block">
+              {/* Use the high-resolution image for all desktop sizes */}
               <OptimizedImage
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/desktopjourney-52SW6NUo2MqRmPVeFIOw4llHPePsE1.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5stepsbig-J8TxuVI671GW2uU9l0iIhMmox03sOI.png"
                 alt="Healthcare journey map showing the flow from Diagnosis to Data Analysis with 5 numbered steps and pain points"
                 width={1200}
                 height={600}
@@ -543,14 +544,15 @@ export default function CaseStudy() {
       <section className="w-full px-4 mb-16 bg-[#181818] min-h-[200px] flex flex-col justify-center relative py-[25px]">
         {/* Top zigzag - positioned to extend 24px above the section */}
         <div
-          className="w-[100vw] h-[25px] absolute left-0"
+          className="w-[100vw] h-[35px] absolute left-0"
           style={{
             backgroundImage:
               "url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zag-top-4Gaz5ZqPS2tOYUi5j9kcTWwhBZgVJh.png)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            top: "-24px",
+            height: "35px",
+            top: "-34px",
           }}
         ></div>
 
@@ -563,20 +565,21 @@ export default function CaseStudy() {
 
         {/* Bottom zigzag - positioned to extend 24px below the section */}
         <div
-          className="w-[100vw] h-[25px] absolute left-0"
+          className="w-[100vw] h-[35px] absolute left-0"
           style={{
             backgroundImage:
               "url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zag-bottom-2kYYJ1r7NCsnJcQ7UvuRP9G9MiVmAY.png)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            bottom: "-24px",
+            height: "35px",
+            bottom: "-34px",
           }}
         ></div>
       </section>
       {/* Rest of the code remains unchanged */}
       {/* Replace the gradient background with the persona image */}
-      <div className="max-w-4xl mx-auto mb-16">
+      <div className="max-w-4xl mx-auto mb-16 px-4 sm:px-6">
         <h3 className="text-xl md:text-2xl font-medium mb-6 text-black">Meet the Informaticist</h3>
 
         <div className="flex flex-col md:flex-row">
@@ -617,7 +620,8 @@ export default function CaseStudy() {
             alt="AI Process: Doctor entry, AI matching, and Human review workflow"
             width={1200}
             height={600}
-            className="w-full h-auto rounded-[10px]"
+            className="w-full h-auto rounded-[10px] max-w-full"
+            style={{ maxWidth: "100%" }}
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <span className="text-5xl font-bold bg-white/70 px-5 py-2 rounded-full" style={hideNumberStyle}>
@@ -1570,7 +1574,7 @@ export default function CaseStudy() {
           </div>
         </div>
       </section>
-      ;
+
       <div id="results-recommendations" className="max-w-4xl mx-auto px-4 mb-16">
         <h2 className="text-3xl sm:text-4xl md:text-[46px] font-black text-black mb-10">Results & Recommendations</h2>
 

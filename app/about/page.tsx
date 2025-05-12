@@ -29,7 +29,7 @@ export default function AboutPage() {
             {/* Methodology cards - grid layout */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {/* Card 1 - Red */}
-              <div className="transform rotate-[-2deg] bg-[#e74c3c] text-white p-6 rounded-lg shadow-lg h-[200px] flex flex-col justify-between">
+              <div className="transform rotate-[-2deg] bg-[#E95151] text-white p-6 rounded-lg shadow-lg h-[200px] flex flex-col justify-between">
                 <h2 className="text-xl font-bold">Take state of the union.</h2>
                 <p className="text-sm">
                   Designers <span className="font-bold">don't</span> know everything. Let's plot what we know and use
@@ -38,7 +38,7 @@ export default function AboutPage() {
               </div>
 
               {/* Card 2 - Purple */}
-              <div className="transform rotate-[1deg] bg-[#8e44ad] text-white p-6 rounded-lg shadow-lg h-[200px] flex flex-col justify-between">
+              <div className="transform rotate-[1deg] bg-[#6D5CCC] text-white p-6 rounded-lg shadow-lg h-[200px] flex flex-col justify-between">
                 <h2 className="text-xl font-bold">Settle on some goals.</h2>
                 <p className="text-sm">
                   We can only leverage each other's power and talents to make exceptional things if we're facing the
@@ -47,7 +47,7 @@ export default function AboutPage() {
               </div>
 
               {/* Card 3 - Orange */}
-              <div className="transform rotate-[-1deg] bg-[#e67e22] text-white p-6 rounded-lg shadow-lg h-[200px] flex flex-col justify-between">
+              <div className="transform rotate-[-1deg] bg-[#E99A24] text-white p-6 rounded-lg shadow-lg h-[200px] flex flex-col justify-between">
                 <h2 className="text-xl font-bold">Flesh it out.</h2>
                 <p className="text-sm">
                   Let's record our ideas, put them on paper, sticky notes, whiteboards, and rigorously interrogate our
@@ -56,7 +56,7 @@ export default function AboutPage() {
               </div>
 
               {/* Card 4 - Blue */}
-              <div className="transform rotate-[2deg] bg-[#3498db] text-white p-6 rounded-lg shadow-lg h-[200px] flex flex-col justify-between">
+              <div className="transform rotate-[2deg] bg-[#66C3EE] text-white p-6 rounded-lg shadow-lg h-[200px] flex flex-col justify-between">
                 <h2 className="text-xl font-bold">Test quickly.</h2>
                 <p className="text-sm">
                   We can't predict the future... but we can predict if our idea serves the needs of the people we think
@@ -65,7 +65,7 @@ export default function AboutPage() {
               </div>
 
               {/* Card 5 - Green */}
-              <div className="transform rotate-[-1.5deg] bg-[#2ecc71] text-white p-6 rounded-lg shadow-lg h-[200px] flex flex-col justify-between">
+              <div className="transform rotate-[-1.5deg] bg-[#57C753] text-white p-6 rounded-lg shadow-lg h-[200px] flex flex-col justify-between">
                 <h2 className="text-xl font-bold">Plot a path forward.</h2>
                 <p className="text-sm">Let's decide what the product needs next, and how it can get better.</p>
               </div>
@@ -76,8 +76,8 @@ export default function AboutPage() {
           <section className="relative mb-32">
             {/* Decorative waves */}
             <div className="absolute bottom-[-100px] right-[-100px] w-[600px] h-[300px] -z-10">
-              <div className="absolute top-0 w-[500px] h-[80px] bg-red-200 rounded-full blur-xl opacity-40"></div>
-              <div className="absolute top-[100px] w-[500px] h-[80px] bg-blue-200 rounded-full blur-xl opacity-40"></div>
+              <div className="absolute top-0 w-[500px] h-[80px] bg-[#E99A24] rounded-full blur-xl opacity-40"></div>
+              <div className="absolute top-[100px] w-[500px] h-[80px] bg-[#66C3EE] rounded-full blur-xl opacity-40"></div>
             </div>
 
             <h2 className="text-5xl font-bold mb-12">About me</h2>
