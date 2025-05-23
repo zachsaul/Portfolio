@@ -502,18 +502,21 @@ export default function CaseStudy() {
             Below is a highly simplified journey map summarizing my team's key findings from these interviews.
           </p>
 
-          {/* Journey Map Graphic - Full width image */}
+          {/* Journey Map Graphic - Full width image with improved quality settings */}
           <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] mb-16">
             {/* Desktop version - only show on md screens and up */}
             <div className="hidden md:block">
-              {/* Use the high-resolution image for all desktop sizes */}
+              {/* Use the high-resolution image for all desktop sizes with improved quality settings */}
               <OptimizedImage
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5stepsbig-J8TxuVI671GW2uU9l0iIhMmox03sOI.png"
                 alt="Healthcare journey map showing the flow from Diagnosis to Data Analysis with 5 numbered steps and pain points"
-                width={1200}
-                height={600}
+                width={1400}
+                height={700}
                 className="w-full h-auto"
                 priority
+                quality={95}
+                sizes="100vw"
+                unoptimized={false}
               />
             </div>
 
@@ -525,6 +528,8 @@ export default function CaseStudy() {
                 width={1200}
                 height={600}
                 className="w-full h-auto"
+                quality={95}
+                sizes="100vw"
               />
             </div>
           </div>
@@ -631,7 +636,7 @@ export default function CaseStudy() {
         </div>
       </div>
       {/* NEW CONTENT STARTS HERE */}
-      {/* Data Quality Problems */}
+      {/* Data Quality Problems - Fixed width to match text content */}
       <div className="max-w-4xl mx-auto px-4 mb-16">
         <h3 className="text-xl md:text-2xl font-medium mb-6 text-black">Data Quality Problems</h3>
         <p className="text-muted-foreground mb-6">
@@ -641,8 +646,13 @@ export default function CaseStudy() {
           meaningful impact.
         </p>
 
-        {/* Circles Animation Section */}
-        <CirclesAnimation />
+        {/* Circles Animation Section - Updated to match content width */}
+        <div className="w-full relative mb-20 overflow-hidden" style={{ height: "425px" }}>
+          <div className="circles-animation-container relative w-full h-full">
+            {/* Background Circles (39) */}
+            <CirclesAnimation />
+          </div>
+        </div>
 
         <p className="text-muted-foreground mb-6">
           During those interviews, we identified three key problems with the data they saw;

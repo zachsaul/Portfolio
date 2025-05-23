@@ -156,10 +156,10 @@ export const ForegroundCircles = ({ count = 13 }) => {
   return <>{circles}</>
 }
 
-// Update the CirclesAnimation component
+// Updated CirclesAnimation component to match content width
 export const CirclesAnimation = () => {
   return (
-    <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] mb-20 overflow-hidden" style={{ height: "425px" }}>
+    <div className="w-full relative mb-20 overflow-hidden" style={{ height: "425px" }}>
       <div className="circles-animation-container relative w-full h-full">
         {/* Background Circles (39) */}
         <BackgroundCircles count={39} />
